@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/tabs_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimary"
+            android:elevation="3dp"/>
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/view_pager_fragment">
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+    <com.nightonke.boommenu.BoomMenuButton
+        android:id="@+id/bmb_standard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:bmb_dotRadius="0dp"
+        android:layout_margin="@dimen/fab_margin">
+        <ImageView
+            android:id="@+id/bmb_standard_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/c_ming"/>
+
+    </com.nightonke.boommenu.BoomMenuButton>
+</FrameLayout>
