@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.yiran.hanfuquan.R;
 
 import java.util.ArrayList;
@@ -27,10 +28,9 @@ public class PaipaiAdapter extends RecyclerView.Adapter<PaipaiAdapter.ViewHolder
         this.context = context;
     }
 
-    public void add(String titleName, int imgId){
-        AdapterCellData adapterCellData = new AdapterCellData(titleName, imgId);
+    public void add(String titleName, String imgUrl){
+        AdapterCellData adapterCellData = new AdapterCellData(titleName, imgUrl);
         datas.add(adapterCellData);
-        notifyDataSetChanged();
     }
 
     @Override
@@ -40,7 +40,9 @@ public class PaipaiAdapter extends RecyclerView.Adapter<PaipaiAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-
+        AdapterCellData data = datas.get(position);
+        Glide.with(context).load(data.imgUrl).into(holder.iv);
+        holder.tvTitle.setText(data.title);
     }
 
     @Override
@@ -49,12 +51,12 @@ public class PaipaiAdapter extends RecyclerView.Adapter<PaipaiAdapter.ViewHolder
     }
 
     private static class AdapterCellData{
-        public  AdapterCellData(String title, int imgId){
+        public  AdapterCellData(String title, String imgUrl){
             this.title = title;
-            this.imgId = imgId;
+            this.imgUrl = imgUrl;
         }
         public String title;
-        public int imgId;
+        public String imgUrl;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{

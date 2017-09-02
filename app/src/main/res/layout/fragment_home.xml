@@ -20,19 +20,4 @@
             android:id="@+id/view_pager_fragment">
         </android.support.v4.view.ViewPager>
     </LinearLayout>
-    <com.nightonke.boommenu.BoomMenuButton
-        android:id="@+id/bmb_standard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        app:bmb_dotRadius="0dp"
-        android:layout_margin="@dimen/fab_margin">
-        <ImageView
-            android:id="@+id/bmb_standard_img"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/c_ming"/>
-
-    </com.nightonke.boommenu.BoomMenuButton>
 </FrameLayout>

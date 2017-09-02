@@ -7,22 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.yiran.hanfuquan.R;
-import com.yiran.hanfuquan.presenter.PaipaiPresenter;
 import com.yiran.hanfuquan.view.activity.MainActivity;
 
 import nucleus.view.NucleusFragment;
 
 
 /**
- * Created by yiran on 2017/9/1.
+ * Created by yiran on 2017/8/28.
+ * 活动页面
  */
 
-public class FragmentPaiai extends NucleusFragment<PaipaiPresenter> {
-
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_paipai, container, false);
+public class AtyFragment extends NucleusFragment{
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        View view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_aty, container, false);
         ((View)((MainActivity)getActivity()).getToolbar().getParent()).setElevation(0);  // 设置toolbar的阴影为0
         return view;
     }

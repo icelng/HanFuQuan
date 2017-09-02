@@ -14,11 +14,15 @@ import nucleus.view.NucleusFragment;
 
 /**
  * Created by yiran on 2017/8/28.
+ * 交易页面
  */
 
-public class FragmentAty extends NucleusFragment{
+public class DealFragment extends NucleusFragment {
+
+    @Nullable
+    @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_aty, container, false);
+        View view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_deal, container, false);
         ((View)((MainActivity)getActivity()).getToolbar().getParent()).setElevation(0);  // 设置toolbar的阴影为0
         return view;
     }
